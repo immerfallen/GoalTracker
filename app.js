@@ -64,7 +64,7 @@ app.delete('/goals/:id', function (req, res) {
         if (err) {
             res.send(err);
         } else {
-            console.log(req.body);
+                      
             console.log('Removing goals...');
 
             res.json(docs);
