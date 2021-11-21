@@ -39,7 +39,9 @@
                     <input type="date" data-bind="value: goalInputDate" class="form-control" id="deadline">
                 </div>
                 <div class="col-md-3">
-                    <button class="btn btn-primary" data-bind="click: addGoal, enable: goalInputName ">Add Goal</button>
+                    <button class="btn btn-primary" data-bind="click: addGoal, enable: goalInputName, visible: !isUpdate()">Add Goal</button>
+                    <button class="btn btn-primary" data-bind="click: updateGoal, enable: goalInputName,visible: isUpdate ">Update Goal</button>
+                    <button class="btn btn-info" data-bind="click: editSelected, enable: canEdit ">Edit</button>
                     <button class="btn btn-danger" data-bind="enable: canEdit, click: deleteSelected">Delete</button>
                 </div>
             </div>
